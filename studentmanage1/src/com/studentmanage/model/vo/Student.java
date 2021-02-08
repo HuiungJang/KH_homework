@@ -1,9 +1,15 @@
 package com.studentmanage.model.vo;
 
+import java.io.Serializable;
 
 //데이터보관클래스
-public class Student {
+public class Student implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3768638998503898282L;
+	
 	private String name;
 	private int age;
 	private String school;

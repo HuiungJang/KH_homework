@@ -1,5 +1,8 @@
 package com.studentmanage.view;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 import com.studentmanage.controller.StudentController;
@@ -10,8 +13,8 @@ import com.studentmanage.model.vo.Student;
 public class MainView {
 	Scanner sc=new Scanner(System.in);
 	Student s = new Student();
-	
-	public void mainMenu(StudentController stc) {
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+	public void mainMenu(StudentController stc) throws IOException{
 		
 		while(true) {
 			System.out.println("===== 학생관리 프로그램 =====");
@@ -43,29 +46,29 @@ public class MainView {
 	}
 	
 	
-	public Student insertStudent() {
+	public Student insertStudent() throws IOException{
 		System.out.println("==== 학생등록 =====");
 		System.out.print("이름 : ");
-		String name=sc.nextLine();
+		String name=br.readLine();
 		
 		System.out.print("나이 : ");
 		int age=sc.nextInt();
 		
 		System.out.print("학교 : ");
 		sc.nextLine();
-		String school=sc.nextLine();
+		String school=br.readLine();
 		
 		System.out.print("주소 : ");
-		String address=sc.nextLine();
+		String address=br.readLine();
 		
 		s =new Student(name, age, school,address);
 		return s;
 	}
 	
-	public Student insertScore() {
+	public Student insertScore() throws IOException{
 		System.out.println("==== 학생 점수 등록 =====");
 		System.out.print("점수 등록할 학생명 : ");
-		s.setName( sc.nextLine() );
+		s.setName( br.readLine() );
 		
 		System.out.print("국어 : ");
 		s.setKor(sc.nextInt());
@@ -94,7 +97,7 @@ public class MainView {
 	}
 	
 	
-	public Student updateStudent() {
+	public Student updateStudent() throws IOException{
 		Student s=new Student();
 		System.out.println("====== 학생정보 수정 ======");
 		System.out.print("수정할 학생명 : ");
@@ -103,16 +106,16 @@ public class MainView {
 		s.setAge(sc.nextInt());
 		sc.nextLine();
 		System.out.print("수정할 주소 : ");
-		s.setAddress(sc.nextLine());
+		s.setAddress(br.readLine() );
 		
 		return s;
 	}
 	
-	public Student nameCheck() {
+	public Student nameCheck() throws IOException{
 		
 		System.out.println("==== 학생 조회 =====");
 		System.out.print("조회할 학생 이름 : ");
-		s.setName( sc.nextLine() );
+		s.setName( br.readLine() );
 
 		return s;
 	}
@@ -126,10 +129,10 @@ public class MainView {
 		return s;
 	}
 	
-	public Student sumAg() {
+	public Student sumAg() throws IOException{
 		System.out.println("==== 학생 총점과 평균 =====");
 		System.out.print("조회할 학생 이름 : ");
-		s.setName( sc.nextLine() );
+		s.setName( br.readLine() );
 		
 		return s;
 	}

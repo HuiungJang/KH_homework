@@ -1,13 +1,19 @@
 package com.studentmanage.model.dao;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 import com.studentmanage.model.vo.Student;
-import com.studentmanage.view.MainView;
 
 public class StudentDao {
 	
 	// 학생들을 보관할수 있는 멤버변수 생성.
-	public Student[] students = new Student[5];
-	
+	public Student[] students = new Student[3];
+	private static int studentsIndex=0;
 	
 	public StudentDao() {
 		// TODO Auto-generated constructor stub
@@ -15,21 +21,36 @@ public class StudentDao {
 	
 	public boolean insertStudent(Student s) {// 생성된 객체의 주소값 들어옴.
 		
-		boolean flag = false;
-		for(int i =0; i<students.length; i++) {
-			if(students[i] == null) { // 빈공간이면 
-				students[i] = s; // s를 i번 인덱스에 넣고 
-				flag = true; // flag를 true로 반환하고 
-				break; // 반복문 종료 
-			}
+		boolean flag = true;
+		try {
+			students[studentsIndex]=s;
+			studentsIndex++;
+		}catch(ArrayIndexOutOfBoundsException e) {
+			Student[] tmp = new Student[students.length+5];
+			// ArrayIndexOutOfBoundsException 발생시
+			// 원래 배열 길이보다 길이 5증가시켜서 새로운 배열만들고
+			// 거기다가 다 복사
+			System.arraycopy(students, 0, tmp, 0, students.length);
+			studentsIndex = students.length;
+			students = tmp;
+			students[studentsIndex] =s ;
+			studentsIndex++;
 		}
+//		boolean flag = false;
+//		for(int i =0; i<students.length; i++) {
+//			if(students[i] == null) { // 빈공간이면 
+//				students[i] = s; // s를 i번 인덱스에 넣고 
+//				flag = true; // flag를 true로 반환하고 
+//				break; // 반복문 종료 
+//			}
+//		}
 		return flag;
 	}
 	
 	public boolean insertScore(Student s) {
 		boolean flag = false;
 		String name = s.getName();
-		
+
 		for(int i = 0; i<students.length; i++) {
 			if(students[i].getName().equals(name)) {
 				// students배열의 getName에서 가져온값이
@@ -101,12 +122,18 @@ public class StudentDao {
 		for(int i = 0; i<students.length; i++) {
 			if(students[i].getName().equals(name) ) {
 				//String name이 studetns[]에 저장되어있는 이름과 같다면.
-				name +=	students[i].getAge()+"\n"+
-						students[i].getAddress()+"\n"+
-						students[i].getKor()+"\n"+
-						students[i].getEng()+"\n"+
-						students[i].getMath()+"\n"+
-						students[i].getCoding();
+				
+//				name +=	students[i].getAge()+"\n"+
+//						students[i].getAddress()+"\n"+
+//						students[i].getKor()+"\n"+
+//						students[i].getEng()+"\n"+
+//						students[i].getMath()+"\n"+
+//						students[i].getCoding();
+				
+				name = students[i]+"\n";
+				
+				
+				
 				// 객체배열 students에 있는 것들을 
 				// name빼고 String name에 저장.
 				// name을 뺀 이유는 
@@ -178,4 +205,37 @@ public class StudentDao {
 			
 		return ag;
 	}
+	
+	public void saveFile() {
+		// 저장되어있는 sutdent를 파일로 저장해서 관리
+		try(ObjectOutputStream oos =new ObjectOutputStream(new FileOutputStream("studentdata.txt"))){
+			
+			oos.writeObject(students);
+			
+		}catch(IOException e) {
+			
+			e.printStackTrace();
+			
+		}
+	}
+	
+	public void loadFile() {
+		File f = new File("studentdata.txt");
+		
+		if(f.exists()) {
+			try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("studentdata.txt"))){
+				
+				students= (Student[])ois.readObject();
+				studentsIndex = students.length-1;
+				
+			}catch(ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+			catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
 }

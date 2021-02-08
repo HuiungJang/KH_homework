@@ -1,5 +1,6 @@
 package com.studentmanage.controller;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import com.studentmanage.model.dao.StudentDao;
@@ -14,11 +15,16 @@ public class StudentController {
 	private Student s = new Student();
 	Scanner sc = new Scanner(System.in);
 	
-	public void mainMenu() {
+	public void mainMenu() throws IOException{
+		
+		
+		// 저장된 데이터 자동으로 불러오기
+		dao.loadFile(); //프로그램 시작전에 저장된 파일 불러오기
 		new MainView().mainMenu(this);
+		dao.saveFile(); // 끝나면 입력한 값들 저장하기
 	}
 	
-	public void insertStudent() {
+	public void insertStudent() throws IOException{
 		//1. 학생정보를 입력할 view화면
 		s=new MainView().insertStudent();
 		//2. StudentDao 데이터 저장소에 저장하기
@@ -29,7 +35,7 @@ public class StudentController {
 		new MainView().printMsg(msg);	
 		
 	}
-	public void insertScore() {
+	public void insertScore() throws IOException{
 		//저장된 학생을 한명선택해서 데이터를 수정
 		String data=dao.searchAllStudent();
 		new MainView().printMsg(data);
@@ -51,7 +57,7 @@ public class StudentController {
 		new MainView().printMsg(data);
 	}
 	
-	public void updateStudent() {
+	public void updateStudent() throws IOException{
 		//저장된 학생을 한명선택해서 데이터를 수정
 		String data=dao.searchAllStudent();
 		new MainView().printMsg(data);
@@ -67,7 +73,7 @@ public class StudentController {
 		
 	}
 
-	public void nameCheck() {
+	public void nameCheck() throws IOException{
 //		String data=dao.searchAllStudent();
 //		new MainView().printMsg(data);
 		
@@ -96,7 +102,7 @@ public class StudentController {
 		new MainView().printMsg(msg);
 	}
 	
-	public void sumAg() {
+	public void sumAg() throws IOException{
 		s = new MainView().sumAg();
 		boolean flag = dao.nameCheck(s);
 		// 입력받은 이름과 dao에 저장된 이름이 같은지 확인.
