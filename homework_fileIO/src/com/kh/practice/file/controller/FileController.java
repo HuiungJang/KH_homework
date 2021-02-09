@@ -11,7 +11,8 @@ public class FileController {
     }
 
     public void fileSave(String file, StringBuilder sb ){
-
+        String s = String.valueOf(sb);
+        fd.fileSave(file,s);
     }
 
     public StringBuilder fileOpen(String file){
