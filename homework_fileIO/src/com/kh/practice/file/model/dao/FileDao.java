@@ -64,6 +64,9 @@ public class FileDao {
 
     public void fileEdit(String file,String s){
         fileSave(file,s);
+        // 파일내용 추가하는 것이기때문에
+        // 굳이 새로 만들필요없이
+        // 이미 만들어둔 메소드 호출해서 해결한다.
     }
 
 }
