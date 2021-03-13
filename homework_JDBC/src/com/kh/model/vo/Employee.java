@@ -3,163 +3,164 @@ package com.kh.model.vo;
 import java.util.Objects;
 
 public class Employee {
-    private String EMP_ID;
-    private String EMP_NAME;
-    private String EMP_NO;
-    private String EMAIL;
-    private String PHONE;
-    private String DEPT_CODE;
-    private String JOB_CODE;
-    private String SAL_LEVEL;
-    private int SALARY;
-    private float BONUS;
-    private int MANAGER_ID;
-    private String HIRE_DATE;
-    private String ENT_DATE;
-    private String ENT_YN;
+    private String empId;
+    private String empName;
+    private String empNo;
+    private String email;
+    private String phone;
+    private String deptCode;
+    private String jobCode;
+    private String salLevel;
+    private int salary;
+    private float bonus;
+    private String managerId;
+    private String hireDate;
+    private String entDate;
+    private String entYn;
 
     public Employee() {
     }
 
-    public Employee(String EMP_ID, String EMP_NAME, String EMP_NO, String EMAIL, String PHONE, String DEPT_CODE, String JOB_CODE, String SAL_LEVEL, int SALARY, float BONUS, int MANAGER_ID, String HIRE_DATE, String ENT_DATE, String ENT_YN) {
-        this.EMP_ID = EMP_ID;
-        this.EMP_NAME = EMP_NAME;
-        this.EMP_NO = EMP_NO;
-        this.EMAIL = EMAIL;
-        this.PHONE = PHONE;
-        this.DEPT_CODE = DEPT_CODE;
-        this.JOB_CODE = JOB_CODE;
-        this.SAL_LEVEL = SAL_LEVEL;
-        this.SALARY = SALARY;
-        this.BONUS = BONUS;
-        this.MANAGER_ID = MANAGER_ID;
-        this.HIRE_DATE = HIRE_DATE;
-        this.ENT_DATE = ENT_DATE;
-        this.ENT_YN = ENT_YN;
+    public Employee(String empId, String empName, String empNo, String email, String phone, String deptCode, String jobCode, String salLevel, int salary, float bonus, String managerId, String hireDate, String entDate, String entYn) {
+        this.empId = empId;
+        this.empName = empName;
+        this.empNo = empNo;
+        this.email = email;
+        this.phone = phone;
+        this.deptCode = deptCode;
+        this.jobCode = jobCode;
+        this.salLevel = salLevel;
+        this.salary = salary;
+        this.bonus = bonus;
+        this.managerId = managerId;
+        this.hireDate = hireDate;
+        this.entDate = entDate;
+        this.entYn = entYn;
     }
 
-    public Employee(String EMP_NAME, String EMP_NO, String EMAIL, String PHONE, String JOB_CODE, String SAL_LEVEL, int SALARY, float BONUS, int MANAGER_ID) {
-        this.EMP_NAME = EMP_NAME;
-        this.EMP_NO = EMP_NO;
-        this.EMAIL = EMAIL;
-        this.PHONE = PHONE;
-        this.JOB_CODE = JOB_CODE;
-        this.SAL_LEVEL = SAL_LEVEL;
-        this.SALARY = SALARY;
-        this.BONUS = BONUS;
-        this.MANAGER_ID = MANAGER_ID;
+    public Employee(String empName, String empNo, String email, String phone, String deptCode,String jobCode, String salLevel, int salary, float bonus, String managerId) {
+        this.empName = empName;
+        this.empNo = empNo;
+        this.email = email;
+        this.phone = phone;
+        this.deptCode=deptCode;
+        this.jobCode = jobCode;
+        this.salLevel = salLevel;
+        this.salary = salary;
+        this.bonus = bonus;
+        this.managerId = managerId;
     }
 
-    public String getEMP_ID() {
-        return EMP_ID;
+    public String getEmpId() {
+        return empId;
     }
 
-    public void setEMP_ID(String EMP_ID) {
-        this.EMP_ID = EMP_ID;
+    public void setEmpId(String empId) {
+        this.empId = empId;
     }
 
-    public String getEMP_NAME() {
-        return EMP_NAME;
+    public String getEmpName() {
+        return empName;
     }
 
-    public void setEMP_NAME(String EMP_NAME) {
-        this.EMP_NAME = EMP_NAME;
+    public void setEmpName(String empName) {
+        this.empName = empName;
     }
 
-    public String getEMP_NO() {
-        return EMP_NO;
+    public String getEmpNo() {
+        return empNo;
     }
 
-    public void setEMP_NO(String EMP_NO) {
-        this.EMP_NO = EMP_NO;
+    public void setEmpNo(String empNo) {
+        this.empNo = empNo;
     }
 
-    public String getEMAIL() {
-        return EMAIL;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEMAIL(String EMAIL) {
-        this.EMAIL = EMAIL;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPHONE() {
-        return PHONE;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPHONE(String PHONE) {
-        this.PHONE = PHONE;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getDEPT_CODE() {
-        return DEPT_CODE;
+    public String getDeptCode() {
+        return deptCode;
     }
 
-    public void setDEPT_CODE(String DEPT_CODE) {
-        this.DEPT_CODE = DEPT_CODE;
+    public void setDeptCode(String deptCode) {
+        this.deptCode = deptCode;
     }
 
-    public String getJOB_CODE() {
-        return JOB_CODE;
+    public String getJobCode() {
+        return jobCode;
     }
 
-    public void setJOB_CODE(String JOB_CODE) {
-        this.JOB_CODE = JOB_CODE;
+    public void setJobCode(String jobCode) {
+        this.jobCode = jobCode;
     }
 
-    public String getSAL_LEVEL() {
-        return SAL_LEVEL;
+    public String getSalLevel() {
+        return salLevel;
     }
 
-    public void setSAL_LEVEL(String SAL_LEVEL) {
-        this.SAL_LEVEL = SAL_LEVEL;
+    public void setSalLevel(String salLevel) {
+        this.salLevel = salLevel;
     }
 
-    public int getSALARY() {
-        return SALARY;
+    public int getSalary() {
+        return salary;
     }
 
-    public void setSALARY(int SALARY) {
-        this.SALARY = SALARY;
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 
-    public float getBONUS() {
-        return BONUS;
+    public float getBonus() {
+        return bonus;
     }
 
-    public void setBONUS(float BONUS) {
-        this.BONUS = BONUS;
+    public void setBonus(float bonus) {
+        this.bonus = bonus;
     }
 
-    public int getMANAGER_ID() {
-        return MANAGER_ID;
+    public String getManagerId() {
+        return managerId;
     }
 
-    public void setMANAGER_ID(int MANAGER_ID) {
-        this.MANAGER_ID = MANAGER_ID;
+    public void setManagerId(String managerId) {
+        this.managerId = managerId;
     }
 
-    public String getHIRE_DATE() {
-        return HIRE_DATE;
+    public String getHireDate() {
+        return hireDate;
     }
 
-    public void setHIRE_DATE(String HIRE_DATE) {
-        this.HIRE_DATE = HIRE_DATE;
+    public void setHireDate(String hireDate) {
+        this.hireDate = hireDate;
     }
 
-    public String getENT_DATE() {
-        return ENT_DATE;
+    public String getEntDate() {
+        return entDate;
     }
 
-    public void setENT_DATE(String ENT_DATE) {
-        this.ENT_DATE = ENT_DATE;
+    public void setEntDate(String entDate) {
+        this.entDate = entDate;
     }
 
-    public String getENT_YN() {
-        return ENT_YN;
+    public String getEntYn() {
+        return entYn;
     }
 
-    public void setENT_YN(String ENT_YN) {
-        this.ENT_YN = ENT_YN;
+    public void setEntYn(String entYn) {
+        this.entYn = entYn;
     }
 
     @Override
@@ -167,31 +168,31 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return EMP_NO == employee.EMP_NO && SALARY == employee.SALARY && Float.compare(employee.BONUS, BONUS) == 0 && MANAGER_ID == employee.MANAGER_ID && Objects.equals(EMP_ID, employee.EMP_ID) && Objects.equals(EMP_NAME, employee.EMP_NAME) && Objects.equals(EMAIL, employee.EMAIL) && Objects.equals(PHONE, employee.PHONE) && Objects.equals(DEPT_CODE, employee.DEPT_CODE) && Objects.equals(JOB_CODE, employee.JOB_CODE) && Objects.equals(SAL_LEVEL, employee.SAL_LEVEL) && Objects.equals(HIRE_DATE, employee.HIRE_DATE) && Objects.equals(ENT_DATE, employee.ENT_DATE) && Objects.equals(ENT_YN, employee.ENT_YN);
+        return salary == employee.salary && Float.compare(employee.bonus, bonus) == 0 && managerId == employee.managerId && Objects.equals(empId, employee.empId) && Objects.equals(empName, employee.empName) && Objects.equals(empNo, employee.empNo) && Objects.equals(email, employee.email) && Objects.equals(phone, employee.phone) && Objects.equals(deptCode, employee.deptCode) && Objects.equals(jobCode, employee.jobCode) && Objects.equals(salLevel, employee.salLevel) && Objects.equals(hireDate, employee.hireDate) && Objects.equals(entDate, employee.entDate) && Objects.equals(entYn, employee.entYn);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(EMP_ID, EMP_NAME, EMP_NO, EMAIL, PHONE, DEPT_CODE, JOB_CODE, SAL_LEVEL, SALARY, BONUS, MANAGER_ID, HIRE_DATE, ENT_DATE, ENT_YN);
+        return Objects.hash(empId, empName, empNo, email, phone, deptCode, jobCode, salLevel, salary, bonus, managerId, hireDate, entDate, entYn);
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "EMP_ID='" + EMP_ID + '\'' +
-                ", EMP_NAME='" + EMP_NAME + '\'' +
-                ", EMP_NO=" + EMP_NO +
-                ", EMAIL='" + EMAIL + '\'' +
-                ", PHONE='" + PHONE + '\'' +
-                ", DEPT_CODE='" + DEPT_CODE + '\'' +
-                ", JOB_CODE='" + JOB_CODE + '\'' +
-                ", SAL_LEVEL='" + SAL_LEVEL + '\'' +
-                ", SALARY=" + SALARY +
-                ", BONUS=" + BONUS +
-                ", MANAGER_ID=" + MANAGER_ID +
-                ", HIRE_DATE='" + HIRE_DATE + '\'' +
-                ", ENT_DATE='" + ENT_DATE + '\'' +
-                ", ENT_YN='" + ENT_YN + '\'' +
+                "empId='" + empId + '\'' +
+                ", empName='" + empName + '\'' +
+                ", empNo='" + empNo + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", deptCode='" + deptCode + '\'' +
+                ", jobCode='" + jobCode + '\'' +
+                ", salLevel='" + salLevel + '\'' +
+                ", salary=" + salary +
+                ", bonus=" + bonus +
+                ", managerId=" + managerId +
+                ", hireDate='" + hireDate + '\'' +
+                ", entDate='" + entDate + '\'' +
+                ", entYn='" + entYn + '\'' +
                 '}';
     }
 }

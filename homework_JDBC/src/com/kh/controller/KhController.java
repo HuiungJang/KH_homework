@@ -59,5 +59,39 @@ public class KhController {
         view.printMsg( result>0? "완료" : "실패");
     }
 
+    public void reviseEmp(){
+        String name = view.reviseEmp();
+        int cho = view.whatReviseEmp();
+        int result = 0;
+
+        if(cho ==1){
+            String reviseDept =view.whatReviseDept();
+            result = service.reviseDept(name,reviseDept);
+            view.printMsg(result>0? "완료":"실패");
+
+        }else if(cho ==2){
+            String reviseJob = view.whatReviseJob();
+            result = service.reviseJob(name,reviseJob);
+            view.printMsg(result>0? "완료":"실패");
+
+        }else if (cho == 3) {
+            String reviseName = view.whatReviseName();
+            result = service.reviseName(name,reviseName);
+            view.printMsg(result>0? "완료":"실패");
+
+        }else{
+            int reviseSalary = view.whatReviseSalary();
+            result = service.reviseSalary(name,reviseSalary);
+            view.printMsg(result>0? "완료":"실패");
+        }
+
+    }
+
+    public void deleteEmp(){
+        String name = view.deleteEmp();
+        int result = service.deleteEmp(name);
+        view.printMsg(result>0? "완료":"실패");
+    }
+
 
 }
