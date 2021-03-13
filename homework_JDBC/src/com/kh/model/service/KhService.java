@@ -2,7 +2,9 @@ package com.kh.model.service;
 
 import com.kh.model.common.JDBCTemplate;
 import com.kh.model.dao.KhDao;
+import com.kh.model.vo.Department;
 import com.kh.model.vo.Employee;
+import com.kh.model.vo.Job;
 
 import java.sql.Connection;
 import java.util.List;
@@ -66,4 +68,46 @@ public class KhService {
         int result =  dao.deleteEmp(conn,name);
         return result;
     }
+
+    public int manageEnrollDept(Department dp){
+        Connection conn = JDBCTemplate.getConnection();
+        return dao.manageEnrollDept(conn,dp);
+    }
+
+    public int manageReviseDeptCode(String[] deptCode){
+        Connection conn = JDBCTemplate.getConnection();
+        return dao.manageReviseDeptCode(conn,deptCode);
+    }
+    public int manageReviseDeptTitle(String[] deptTitle){
+        Connection conn = JDBCTemplate.getConnection();
+        return dao.manageReviseDeptTitle(conn,deptTitle);
+    }
+    public int manageReviseLocationCode(String[] locationCode){
+        Connection conn = JDBCTemplate.getConnection();
+        return dao.manageReviseLocationCode(conn,locationCode);
+    }
+
+    public int manageDeleteDept(String delete){
+        Connection conn = JDBCTemplate.getConnection();
+        return dao.manageDeleteDept(conn,delete);
+    }
+
+    public int manageEnrollJob(Job j){
+        Connection conn = JDBCTemplate.getConnection();
+        return dao.manageEnrollJob(conn,j);
+    }
+
+    public int manageReviseJobCode(String[] JobCode){
+        Connection conn = JDBCTemplate.getConnection();
+        return dao.manageReviseJobCode(conn,JobCode);
+    }
+    public int manageReviseJobTitle(String[] JobTitle){
+        Connection conn = JDBCTemplate.getConnection();
+        return dao.manageReviseJobTitle(conn,JobTitle);
+    }
+    public int manageDeleteJob(String delete){
+        Connection conn = JDBCTemplate.getConnection();
+        return dao.manageDeleteJob(conn,delete);
+    }
+
 }

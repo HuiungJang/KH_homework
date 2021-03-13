@@ -1,7 +1,9 @@
 package com.kh.view;
 
 import com.kh.controller.KhController;
+import com.kh.model.vo.Department;
 import com.kh.model.vo.Employee;
+import com.kh.model.vo.Job;
 
 import java.util.List;
 import java.util.Scanner;
@@ -42,8 +44,10 @@ public class KhView {
                     c.deleteEmp();
                     break;
                 case 6:
+                    c.manageDept();
                     break;
                 case 7:
+                    c.manageJob();
                     break;
             }
         }
@@ -185,6 +189,134 @@ public class KhView {
 
         return name;
     }
+
+    public int manageDept(){
+        System.out.println("1. 부서등록");
+        System.out.println("2. 부서수정");
+        System.out.println("3. 부서삭제");
+        System.out.println("선택 : ");
+        int cho = sc.nextInt();
+
+        return cho;
+    }
+
+    public Department enrollDept(){
+        System.out.println("등록할 부서코드 : ");
+        String deptCode = sc.nextLine();
+        System.out.println("등록할 부서명 : ");
+        String deptTitle=sc.nextLine();
+        System.out.println("등록할 지역코드 : ");
+        String locationId =sc.nextLine();
+
+        Department dp = new Department(deptCode,deptTitle,locationId);
+        return dp;
+    }
+
+    public String deleteDept(){
+        System.out.println("삭제할 부서코드 :");
+        return sc.nextLine();
+    }
+
+    public int reviseDept(){
+        System.out.println("1. 부서코드  ");
+        System.out.println("2. 부서명  ");
+        System.out.println("3. 지역코드  ");
+        System.out.println("어떤거 수정?");
+
+        return  sc.nextInt();
+    }
+
+    public String[] whatDeptCode(){
+        System.out.println("어떤부서코드? : ");
+        String originDeptCode = sc.nextLine();
+
+        System.out.println("어떤걸로? : ");
+        String reviseDeptCode = sc.nextLine();
+
+        String[] deptCode= {originDeptCode,reviseDeptCode};
+
+        return deptCode;
+    }
+    public String[] whatDeptTitle(){
+        System.out.println("어떤부서명? : ");
+        String originDeptTitle = sc.nextLine();
+
+        System.out.println("어떤걸로? : ");
+        String reviseDeptTitle = sc.nextLine();
+
+        String[] deptTitle= {originDeptTitle,reviseDeptTitle};
+
+        return deptTitle;
+    }
+    public String[] whatLocationCode(){
+        System.out.println("어떤지역코드? : ");
+        String originLocationCode = sc.nextLine();
+
+        System.out.println("어떤걸로? : ");
+        String reviseLocationCode = sc.nextLine();
+
+        String[] locationCode= {originLocationCode,reviseLocationCode};
+
+        return locationCode;
+    }
+
+
+
+
+    public int manageJob(){
+        System.out.println("1. 직책등록");
+        System.out.println("2. 직책수정");
+        System.out.println("3. 직책삭제");
+        System.out.println("선택 : ");
+        int cho = sc.nextInt();
+
+        return cho;
+    }
+    public Job enrollJob(){
+        System.out.println("등록할 직책코드 : ");
+        String jobCode = sc.nextLine();
+        System.out.println("등록할 직책명 : ");
+        String jobName=sc.nextLine();
+
+        Job j = new Job(jobCode,jobName);
+        return j;
+    }
+
+    public String deleteJob(){
+        System.out.println("삭제할 직책코드 :");
+        return sc.nextLine();
+    }
+    public int reviseJob(){
+        System.out.println("1. 직책코드 : ");
+        System.out.println("2. 직책명 : ");
+        System.out.println("어떤거 수정?");
+
+        return  sc.nextInt();
+    }
+
+    public String[] whatJobCode(){
+        System.out.println("어떤 직책코드? : ");
+        String originJobCode = sc.nextLine();
+
+        System.out.println("어떤걸로? : ");
+        String reviseJobCode = sc.nextLine();
+
+        String[] jobCode= {originJobCode,reviseJobCode};
+
+        return jobCode;
+    }
+    public String[] whatJobTitle(){
+        System.out.println("어떤 직책명? : ");
+        String originJobTitle = sc.nextLine();
+
+        System.out.println("어떤걸로? : ");
+        String reviseJobTitle = sc.nextLine();
+
+        String[] jobTitle= {originJobTitle,reviseJobTitle};
+
+        return jobTitle;
+    }
+
 
     public void printMsg(String msg){
         System.out.println(msg);
