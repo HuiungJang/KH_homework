@@ -245,8 +245,8 @@ public class KhDao {
             ptmt.setString(2, name);
 
             result = ptmt.executeUpdate();
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -268,8 +268,8 @@ public class KhDao {
             ptmt.setString(2, name);
 
             result = ptmt.executeUpdate();
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -290,8 +290,8 @@ public class KhDao {
 
             result = ptmt.executeUpdate();
 
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -314,8 +314,8 @@ public class KhDao {
 
             result = ptmt.executeUpdate();
 
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -340,8 +340,8 @@ public class KhDao {
 
             result = ptmt.executeUpdate();
 
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
         }catch (SQLException e) {
             e.printStackTrace();
         }finally {
@@ -364,8 +364,8 @@ public class KhDao {
 
             result = ptmt.executeUpdate();
 
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
         }catch (SQLException e) {
             e.printStackTrace();
         }finally {
@@ -388,8 +388,8 @@ public class KhDao {
 
             result = ptmt.executeUpdate();
 
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
         }catch (SQLException e) {
             e.printStackTrace();
         }finally {
@@ -409,8 +409,8 @@ public class KhDao {
 
             result = ptmt.executeUpdate();
 
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -432,8 +432,8 @@ public class KhDao {
 
             result = ptmt.executeUpdate();
 
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -458,9 +458,8 @@ public class KhDao {
             ptmt.setString(2,originJobCode);
 
             result = ptmt.executeUpdate();
-
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
         }catch (SQLException e) {
             e.printStackTrace();
         }finally {
@@ -483,8 +482,8 @@ public class KhDao {
 
             result = ptmt.executeUpdate();
 
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
         }catch (SQLException e) {
             e.printStackTrace();
         }finally {
@@ -504,8 +503,8 @@ public class KhDao {
 
             result = ptmt.executeUpdate();
 
-            if (result > 0) conn.commit();
-            else conn.rollback();
+            if (result > 0) JDBCTemplate.commit(conn);
+            else JDBCTemplate.rollback(conn);
 
         } catch (SQLException e) {
             e.printStackTrace();
