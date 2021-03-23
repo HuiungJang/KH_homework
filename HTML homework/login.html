@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;800&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    a{text-decoration: none; color: black;}
+    *{font-family:"Nanum Myeongjo"; font-size:20px;}
+    .logoimgsize{height: 80px; width: 80px;}
+    #header{position: relative;  width:100%; height:100px; }
+    #section{position: relative; width: 100%; height:500px; }
+    #footer{position: relative; width: 100%; height:100px;}
+    .title{text-align: center;}
+    .logindiv{position: relative; margin-top: 140px; margin-left: 28%;}
+    .loginbutton{position: relative; margin-left: 15%; margin-top:20px;} 
+
+    .border{border:1px black solid; height: 500px; width: 700px; position: relative; margin-left: 25%; box-shadow:2px 2px 2px black;}
+    .homediv{position: relative; margin-top: 40px; margin-left:45%;}
+
+    .home2:hover{
+      animation-name:ani;
+      text-shadow: 0.05em 0 0.05em hotpink, -0.1em 0 0.1em yellowgreen;
+      animation-duration: 0.01s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    @keyframes ani{
+      from{
+        text-shadow:1px 0 0 hotpink, -2px 0 0 yellowgreen;
+      }
+      to{
+        text-shadow:2px 1px 2px hotpink, -1px 1px 2px yellowgreen;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div ><p class="title"><img class="logoimgsize" src="https://t1.daumcdn.net/cfile/tistory/99094C455D14D2661E" alt=""></p></div>
+  </header>
+  <section id="section">
+    <div class="border">
+      <div class="logindiv">
+        <table>
+          <tr>
+            <td>아이디</td>
+            <td><input type="text" name="id" id="id" placeholder="아이디를 입력해주세요"></td>
+          </tr>
+          <tr>
+            <td>비밀번호</td>
+            <td><input type="password" name="id" id="id" placeholder="비밀번호를 입력해주세요"></td>
+          </tr>
+        
+        </table>
+        <div class="loginbutton">
+          <input type="button" value="로그인" id="login">
+          <input type="button" value="회원가입" id="signup">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="homediv">
+      <p><a class="home2" href="main.html">홈으로 돌아가기</a></p>
+    </div>
+  </footer>
+  
+</body>
+</html>
