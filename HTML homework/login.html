@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;800&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    a{text-decoration: none; color: black;}
+    *{font-family:"Nanum Myeongjo"; font-size:20px;}
+    .logoimgsize{height: 80px; width: 80px;}
+    #header{position: relative;  width:100%; height:100px; }
+    #section{position: relative; width: 100%; height:500px; }
+    #footer{position: relative; width: 100%; height:100px;}
+    .title{text-align: center;}
+    .logintitle{margin:40px; font-size:30px;}
+    .logindiv{position: relative; margin-top: 45px; margin-left: 25%; }
+    .loginbutton{position: relative; margin-left: 5%; margin-top:20px;}
+    .button{border-radius: 10px; font-size:25px; width: 250px; background-color: white; box-shadow: 0.5px 0.5px 1px black; border:outset;} 
+    .signup:hover{border-bottom: 1px black solid;}
+
+    .border{border:1px black outset; height: 500px; width: 600px; box-shadow:1px 1px 1px black; border-radius: 10px; display:block; margin-right:auto; margin-left:auto;}
+    .homediv{position: relative; margin-top: 40px; margin-left:45%;}
+
+    .home2:hover{
+      animation-name:ani;
+      text-shadow: 0.05em 0 0.05em hotpink, -0.1em 0 0.1em yellowgreen;
+      animation-duration: 0.01s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    @keyframes ani{
+      from{
+        text-shadow:1px 0 0 hotpink, -2px 0 0 yellowgreen;
+      }
+      to{
+        text-shadow:2px 1px 2px hotpink, -1px 1px 2px yellowgreen;
+      }
+    }
+    .input{border:0; border-bottom:2px gray inset; margin: 15px; padding:13px;}
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div ><p class="title"><img class="logoimgsize" src="https://t1.daumcdn.net/cfile/tistory/99094C455D14D2661E" alt=""></p></div>
+  </header>
+  <section id="section">
+    <div class="border">
+      <h2 class="title logintitle">로그인</h2>
+      <div class="logindiv">
+        <form action="">
+          <table>
+            <tr>
+              <td><input class="input" type="text" name="id" id="id" placeholder="아이디"></td>
+            </tr>
+            <tr>
+              <td><input class="input" type="password" name="id" placeholder="비밀번호"></td>
+            </tr>
+          
+          </table>
+          <div class="loginbutton">
+            <input class="button" type="button" value="로그인" id="login">
+          </div>
+        </form>
+      </div>
+      <p class="title">아이디가 없으신가요?<br><a class="title signup" href="">회원가입</a></p>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="homediv">
+      <p><a class="home2" href="main.html">홈으로 돌아가기</a></p>
+    </div>
+  </footer>
+  
+</body>
+</html>

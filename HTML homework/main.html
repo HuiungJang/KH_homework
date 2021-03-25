@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;800&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<style type="text/css">
+  *{margin: 0; padding: 0;}
+  a{text-decoration: none; color:black;}
+  li{list-style: none;}
+  .logo{height:50px; width:50px; float:left; position: relative; top:15px; left:80px;}
+  #top{height: 80px; background-color: rgb(247, 233, 218);}
+  .header{height:150px;}
+  .footer{height: 200px;}
+  .footerbox{
+    font-family:"Nanum Myeongjo"; 
+    font-weight: bold; font-size: 50px; 
+    position: relative; 
+    left: 40px; 
+    top:50px;
+    }
+
+  .box{width:1200px; margin:0 auto;}
+  #search {position: relative; top: -20px; right:300px; left:70%;}
+  #search input{
+    height: 20px; 
+    border:1; 
+    height:40px; 
+    width: 300px;
+    border-radius: 20px;
+  }
+
+  #main_menu{
+    padding:25px 20px;
+    border-top:solid 1px #dddddd;
+    border-bottom:solid 1px #dddddd;
+    font-size:12px;
+  }
+  #main_menu li{display: inline; margin-left:30px;}
+  .box{margin: 0 auto; width:1300px; font-family:"Nanum Myeongjo"; font-size:30px;}
+
+  #top_banner{display: inline-block; position: relative; top:28px; left:100px;}
+  #title{font-size:250%; font-weight:bold; margin-left:40%; margin-top:2%;}
+  
+  .font{font-size:120%; font-family:"Nanum Myeongjo";}
+
+
+  .menu{position:relative; left:95%; top:-45%;}
+  .menuicon:hover{display:none;}
+  .submenu{visibility: hidden;}
+  .menuicon:hover~.submenu{display: block; visibility: visible;}
+
+  .clear{clear:both;}
+
+  #contentbox{font-family:"Nanum Myeongjo"; font-size:40px; padding:40px;}
+  #contentbox h3{float:lett; margin-left:40%; font-size:40px;}
+  #contentbox p{float:right; font-size:25px;}
+  
+  .imgsize{width: 180px; height: 250px;}
+  .menuimgsie{width:60px; height: 50px;}
+
+  .post{
+    width: 230px; 
+    margin:30px 0 0 25px;
+    display: inline-block;
+    font-family:"Nanum Myeongjo";
+  }
+  .post .name{font-weight: bold; font-size:30px;}
+  .post .count{font-size: 20px;}
+  .post .count span{color:darkorange}
+  .border{border-top: solid #dddddd;}
+</style>
+<body>
+    <div id="top">
+      <div id="top-logo"> 
+        <img class="logo" src="https://t1.daumcdn.net/cfile/tistory/99094C455D14D2661E" alt="">
+      </div>
+      <div id="top_banner" class="font"> 
+        왼쪽은 로고, 오른쪽은 검색창 여기는 공지사항 적는 공간
+      </div>
+    </div>
+
+    <div class="header">
+      <div id="title"><a href="#">메인 페이지</a></div>
+      <div id="search">
+        <input type="search" name="검색창" id="">
+      </div>
+      <div class="menu">
+        <ul>
+          <li class="menuicon"><img class="menuimgsie" src="https://w7.pngwing.com/pngs/981/297/png-transparent-computer-icons-encapsulated-postscript-menu-button-text-symbol-line.png"alt=""></li>
+          <ul class="submenu">
+            <li><a href="#">홈으로</a></li>
+            <li><a href="login.html">로그인</a></li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+
+  </header>
+  <nav id="main_menu">
+    <div class="box">
+      <ul>
+        <li>사진</li>
+        <li>음악</li>
+        <li>영상</li>
+        <li>기타</li>
+      </ul>
+    </div>
+  </nav>
+  <section id="contentbox">
+    <div>
+      <article>
+        <div class="box">
+          <ul>
+            <h3>전체 조회</h3>
+            <br>
+            <p>추천순 | 인기도순 | 최신등록순</p>
+          </ul>
+          <br>
+          <div class="clear"></div>
+          <div class="border">
+            <ul class="post">
+              <li><img class="imgsize" src="https://img3.yna.co.kr/etc/inner/KR/2018/07/18/AKR20180718026400005_01_i_P2.jpg" alt="" ></li>
+              <li class="name">사진1</li>
+              <li class="count">조회수 <span>3 </span> 추천수<span> 5</span></li>
+            </ul>
+            <ul class="post">
+              <li><img class="imgsize" src="https://img3.yna.co.kr/etc/inner/KR/2018/07/18/AKR20180718026400005_01_i_P2.jpg" alt="" ></li>
+              <li class="name">사진2</li>
+              <li class="count">조회수 <span>3 </span> 추천수<span> 5</span></li>
+            </ul>
+            <ul class="post">
+              <li><img class="imgsize" src="https://img3.yna.co.kr/etc/inner/KR/2018/07/18/AKR20180718026400005_01_i_P2.jpg" alt="" ></li>
+              <li class="name">사진3</li>
+              <li class="count">조회수 <span>3 </span> 추천수<span> 5</span></li>
+            </ul>
+            <ul class="post">
+              <li><img class="imgsize" src="https://img3.yna.co.kr/etc/inner/KR/2018/07/18/AKR20180718026400005_01_i_P2.jpg" alt="" ></li>
+              <li class="name">사진4</li>
+              <li class="count">조회수 <span>3 </span> 추천수<span> 5</span></li>
+            </ul>
+            <ul class="post">
+              <li><img class="imgsize" src="https://img3.yna.co.kr/etc/inner/KR/2018/07/18/AKR20180718026400005_01_i_P2.jpg" alt="" ></li>
+              <li class="name">사진5</li>
+              <li class="count">조회수 <span>3 </span> 추천수<span> 5</span></li>
+            </ul>
+            <ul class="post">
+              <li><img class="imgsize" src="https://img3.yna.co.kr/etc/inner/KR/2018/07/18/AKR20180718026400005_01_i_P2.jpg" alt="" ></li>
+              <li class="name">사진6</li>
+              <li class="count">조회수 <span>3 </span> 추천수<span> 5</span></li>
+            </ul>
+            <ul class="post">
+              <li><img class="imgsize" src="https://img3.yna.co.kr/etc/inner/KR/2018/07/18/AKR20180718026400005_01_i_P2.jpg" alt="" ></li>
+              <li class="name">사진7</li>
+              <li class="count">조회수 <span>3 </span> 추천수<span> 5</span></li>
+            </ul>
+            <ul class="post">
+              <li><img class="imgsize" src="https://img3.yna.co.kr/etc/inner/KR/2018/07/18/AKR20180718026400005_01_i_P2.jpg" alt="" ></li>
+              <li class="name">사진8</li>
+              <li class="count">조회수 <span>3 </span> 추천수<span> 5</span></li>
+            </ul>
+            <ul class="post">
+              <li><img class="imgsize" src="https://img3.yna.co.kr/etc/inner/KR/2018/07/18/AKR20180718026400005_01_i_P2.jpg" alt="" ></li>
+              <li class="name">사진9</li>
+              <li class="count">조회수 <span>3 </span> 추천수<span> 5</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <hr>
+  <footer class="footer">
+    <div class="footerbox">
+      만든사람 : 장희웅
+    </div>
+  </footer>
+</body>
+</html>
