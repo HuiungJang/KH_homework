@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{margin: 0; padding: 0; list-style: none; font-size:40px;}
+  header{border:1px blue solid; height:200px; width:1400px; background-color:skyblue; margin-bottom:5px;}
+  .topcontainer{background-color:lightgray; width:1400px; height: 190px; margin:auto;margin-top: 5px;}
+  
+  section{border:1px blue solid;height:600px; width:1400px; background-color:skyblue; margin-bottom:5px;}
+  footer{border:1px blue solid;height:200px; width:1400px; background-color:skyblue;}
+  .footerbox{position: absolute; background-color:lightgray; width:1400px; height: 190px; margin-left:0.3%; margin-top: 5px;}
+  .footercontet{margin-top:75px; margin-left:30%;margin-right:30%}
+  /* #logo{position: relative; margin-left:3%; margin-top:80px;} */
+  #logo>p{position: absolute; margin-top: 70px; margin-left: 3%;}
+  .clear{clear: both;}
+
+  #menu{position: relative;}
+  #menu ul{position:absolute; margin-left:300px; width:40%; margin-top: 70px;}
+  .menulist{float:left; margin-left:5%;}
+
+  #login{position: relative;}
+  #login>p{float:right; margin-right:3%; margin-top: 70px;}
+  
+  .contentbox{background-color: lightgray; height: 590px; width:680px;margin-top:6px; border:1px white outset;}
+  .left{position: relative; display: inline-block; margin-left:10px;}
+  .right{position: relative; display: inline-block; margin-left:4px;}
+
+  caption{font-size:30px; width:300px; margin-top: 10%;}
+  td{font-size:20px; text-align: center;}
+  .textleft{text-align: left;}
+  table{width:91%;height:250px; border-top:4px black solid; border-bottom:4px black solid; margin-left:4%; border-collapse: collapse;}
+  .tabletitle{background-color: gray; border-bottom:4px black solid; color:white;}
+  .backwhite{background-color: white;}
+
+</style>
+<body>
+    <header>
+    <div class="topcontainer">
+      <div id="logo">
+        <p>로고 이미지</p>
+      </div>
+      <div id="menu">
+        <ul>
+          <li class="menulist">메뉴 1</li>
+          <li class="menulist">메뉴 2</li>
+          <li class="menulist">메뉴 3</li>
+        </ul>
+      </div>
+      <div id="login">
+        <p>로그인</p>
+      </div>
+    </div>
+  </header>
+  <section >
+    <div class="contentbox left">
+      <table class="tablefont">
+        <caption>최근에 등록된 게시글 1</caption>
+        <tr class="tabletitle">
+          <td>번호</td>
+          <td>제목</td>
+          <td>날짜</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="textleft">게시글5</td>
+          <td class="textleft">02/25</td>
+        </tr>
+        <tr class="backwhite">
+          <td>4</td>
+          <td class="textleft">게시글4</td>
+          <td class="textleft">02/25</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="textleft">게시글3</td>
+          <td class="textleft">02/25</td>
+        </tr>
+        <tr class="backwhite">
+          <td>2</td>
+          <td class="textleft">게시글2</td>
+          <td class="textleft">02/25</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td class="textleft">게시글1</td>
+          <td class="textleft">02/25</td>
+        </tr>
+      </table>
+    </div>
+    <div class="contentbox right">
+      <table class="tablefont">
+        <caption>최근에 등록된 게시글 1</caption>
+        <tr class="tabletitle">
+          <td>번호</td>
+          <td>제목</td>
+          <td>날짜</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="textleft">게시글5</td>
+          <td class="textleft">02/25</td>
+        </tr>
+        <tr class="backwhite">
+          <td>4</td>
+          <td class="textleft">게시글4</td>
+          <td class="textleft">02/25</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="textleft">게시글3</td>
+          <td class="textleft">02/25</td>
+        </tr>
+        <tr class="backwhite">
+          <td>2</td>
+          <td class="textleft">게시글2</td>
+          <td class="textleft">02/25</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td class="textleft">게시글1</td>
+          <td class="textleft">02/25</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <footer>
+    <div class="footerbox">
+      <div class="footercontet">Copyright© Create By HeeUng</div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>
