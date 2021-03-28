@@ -5,135 +5,131 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{margin:0px; padding:0px; list-style: none;}
+    /* 배경색과 전체 레이아웃 */
+    header{border:1px blue solid; height: 100px; width: 900px; background-color: rgb(177, 210, 231); margin-bottom: 5px;}
+    section{border:1px blue solid; height: 400px; width: 900px;background-color: rgb(177, 210, 231);margin-bottom: 5px;}
+    footer{border:1px blue solid; height: 100px; width: 900px;background-color: rgb(177, 210, 231);}
+
+    /* header부분 */
+    header>div{background-color: rgb(229, 226, 226); height:90px; width:890px; margin-top: 5px; margin-left: 5px;}
+    header>div>span{font-size:25px;}
+    #logo{float: left; margin-left: 25px; margin-top:32.5px;}
+    #menu{float: left; margin-top: 32.5px; margin-left: 25px;}
+    #menu>ul>li{float:left; padding-left: 25px;}
+    #login{float:right; margin-top: 32.5px; margin-right:25px;}
+
+    /* section 부분 */
+    section>span{display: inline-block; margin-top:5px; margin-left: 5px;}
+
+    section table{height:200px; width:420px; margin-top:20px; margin-left:10px; border-top:4px black solid; border-bottom:4px black solid; border-collapse: collapse;}
+    caption{font-size:20px;width:200px; margin-bottom: 10px; margin-top: 20px;}
+    #leftspan{background-color: rgb(229, 226, 226); height:390px; width:440px;}
+    tr:nth-child(2n-1){background-color: white;}
+    #trstyle{border-bottom: 4px black solid; text-align:center; background-color: rgb(148, 147, 147); color:white; font-weight: bold;}
+    .tdstylenumber{text-align:center;}
+
+    #rightspan{background-color: rgb(229, 226, 226); height:390px; width:440px;}
+    
+    /* footer 부분  */
+    footer>div{background-color: rgb(229, 226, 226); height:90px; width:890px; margin-top: 5px; margin-left: 5px;}
+    footer span{font-size:25px; display: inline-block; margin-top:32.5px; margin-left:289.5px;}
+  
+
+  </style>
 </head>
-<style>
-  *{margin: 0; padding: 0; list-style: none; font-size:40px;}
-  header{border:1px blue solid; height:200px; width:1400px; background-color:skyblue; margin-bottom:5px;}
-  .topcontainer{background-color:lightgray; width:1400px; height: 190px; margin:auto;margin-top: 5px;}
-  
-  section{border:1px blue solid;height:600px; width:1400px; background-color:skyblue; margin-bottom:5px;}
-  footer{border:1px blue solid;height:200px; width:1400px; background-color:skyblue;}
-  .footerbox{position: absolute; background-color:lightgray; width:1400px; height: 190px; margin-left:0.3%; margin-top: 5px;}
-  .footercontet{margin-top:75px; margin-left:30%;margin-right:30%}
-  /* #logo{position: relative; margin-left:3%; margin-top:80px;} */
-  #logo>p{position: absolute; margin-top: 70px; margin-left: 3%;}
-  .clear{clear: both;}
-
-  #menu{position: relative;}
-  #menu ul{position:absolute; margin-left:300px; width:40%; margin-top: 70px;}
-  .menulist{float:left; margin-left:5%;}
-
-  #login{position: relative;}
-  #login>p{float:right; margin-right:3%; margin-top: 70px;}
-  
-  .contentbox{background-color: lightgray; height: 590px; width:680px;margin-top:6px; border:1px white outset;}
-  .left{position: relative; display: inline-block; margin-left:10px;}
-  .right{position: relative; display: inline-block; margin-left:4px;}
-
-  caption{font-size:30px; width:300px; margin-top: 10%;}
-  td{font-size:20px; text-align: center;}
-  .textleft{text-align: left;}
-  table{width:91%;height:250px; border-top:4px black solid; border-bottom:4px black solid; margin-left:4%; border-collapse: collapse;}
-  .tabletitle{background-color: gray; border-bottom:4px black solid; color:white;}
-  .backwhite{background-color: white;}
-
-</style>
 <body>
-    <header>
-    <div class="topcontainer">
-      <div id="logo">
-        <p>로고 이미지</p>
-      </div>
-      <div id="menu">
+  <header>
+    <div>
+      <span id="logo">로고이미지</span>
+      <span id="menu">
         <ul>
-          <li class="menulist">메뉴 1</li>
-          <li class="menulist">메뉴 2</li>
-          <li class="menulist">메뉴 3</li>
+          <li>메뉴1</li>
+          <li>메뉴2</li>
+          <li>메뉴3</li>
         </ul>
-      </div>
-      <div id="login">
-        <p>로그인</p>
-      </div>
+      </span>
+      <span id="login">로그인</span>
     </div>
   </header>
-  <section >
-    <div class="contentbox left">
-      <table class="tablefont">
-        <caption>최근에 등록된 게시글 1</caption>
-        <tr class="tabletitle">
+  <section>
+    <span id="leftspan">
+      <table>
+        <caption>최근에 등록된 게시글1</caption>
+        <tr id="trstyle">
           <td>번호</td>
           <td>제목</td>
           <td>날짜</td>
         </tr>
         <tr>
-          <td>5</td>
-          <td class="textleft">게시글5</td>
-          <td class="textleft">02/25</td>
-        </tr>
-        <tr class="backwhite">
-          <td>4</td>
-          <td class="textleft">게시글4</td>
-          <td class="textleft">02/25</td>
+          <td class="tdstylenumber">5</td>
+          <td>게시글5</td>
+          <td>02/25</td>
         </tr>
         <tr>
-          <td>3</td>
-          <td class="textleft">게시글3</td>
-          <td class="textleft">02/25</td>
-        </tr>
-        <tr class="backwhite">
-          <td>2</td>
-          <td class="textleft">게시글2</td>
-          <td class="textleft">02/25</td>
+          <td class="tdstylenumber">4</td>
+          <td>게시글4</td>
+          <td>02/25</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td class="textleft">게시글1</td>
-          <td class="textleft">02/25</td>
+          <td class="tdstylenumber">3</td>
+          <td>게시글3</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">2</td>
+          <td>게시글2</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">1</td>
+          <td>게시글1</td>
+          <td>02/25</td>
         </tr>
       </table>
-    </div>
-    <div class="contentbox right">
-      <table class="tablefont">
-        <caption>최근에 등록된 게시글 1</caption>
-        <tr class="tabletitle">
+    </span>
+    <span id="rightspan">
+      <table>
+        <caption>최근에 등록된 게시글2</caption>
+        <tr id="trstyle">
           <td>번호</td>
           <td>제목</td>
           <td>날짜</td>
         </tr>
         <tr>
-          <td>5</td>
-          <td class="textleft">게시글5</td>
-          <td class="textleft">02/25</td>
-        </tr>
-        <tr class="backwhite">
-          <td>4</td>
-          <td class="textleft">게시글4</td>
-          <td class="textleft">02/25</td>
+          <td class="tdstylenumber">5</td>
+          <td>게시글5</td>
+          <td>02/25</td>
         </tr>
         <tr>
-          <td>3</td>
-          <td class="textleft">게시글3</td>
-          <td class="textleft">02/25</td>
-        </tr>
-        <tr class="backwhite">
-          <td>2</td>
-          <td class="textleft">게시글2</td>
-          <td class="textleft">02/25</td>
+          <td class="tdstylenumber">4</td>
+          <td>게시글4</td>
+          <td>02/25</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td class="textleft">게시글1</td>
-          <td class="textleft">02/25</td>
+          <td class="tdstylenumber">3</td>
+          <td>게시글3</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">2</td>
+          <td>게시글2</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">1</td>
+          <td>게시글1</td>
+          <td>02/25</td>
         </tr>
       </table>
-    </div>
+    </span>
   </section>
   <footer>
-    <div class="footerbox">
-      <div class="footercontet">Copyright© Create By HeeUng</div>
+    <div>
+      <span class="footercopyright">Copyright© Create By XXXXX</span>
     </div>
   </footer>
-
   
 </body>
 </html>
