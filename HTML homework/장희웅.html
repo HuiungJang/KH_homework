@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0px; padding:0px; list-style: none;}
+    /* 배경색과 전체 레이아웃 */
+    header{border:1px blue solid; height: 100px; width: 900px; background-color: rgb(177, 210, 231); margin-bottom: 5px;}
+    section{border:1px blue solid; height: 400px; width: 900px;background-color: rgb(177, 210, 231);margin-bottom: 5px;}
+    footer{border:1px blue solid; height: 100px; width: 900px;background-color: rgb(177, 210, 231);}
+
+    /* header부분 */
+    header>div{background-color: rgb(229, 226, 226); height:90px; width:890px; margin-top: 5px; margin-left: 5px;}
+    header>div>span{font-size:25px;}
+    #logo{float: left; margin-left: 25px; margin-top:32.5px;}
+    #menu{float: left; margin-top: 32.5px; margin-left: 25px;}
+    #menu>ul>li{float:left; padding-left: 25px;}
+    #login{float:right; margin-top: 32.5px; margin-right:25px;}
+
+    /* section 부분 */
+    section>span{display: inline-block; margin-top:5px; margin-left: 5px;}
+
+    section table{height:200px; width:420px; margin-top:20px; margin-left:10px; border-top:4px black solid; border-bottom:4px black solid; border-collapse: collapse;}
+    caption{font-size:20px;width:200px; margin-bottom: 10px; margin-top: 20px;}
+    #leftspan{background-color: rgb(229, 226, 226); height:390px; width:440px;}
+    tr:nth-child(2n-1){background-color: white;}
+    #trstyle{border-bottom: 4px black solid; text-align:center; background-color: rgb(148, 147, 147); color:white; font-weight: bold;}
+    .tdstylenumber{text-align:center;}
+
+    #rightspan{background-color: rgb(229, 226, 226); height:390px; width:440px;}
+    
+    /* footer 부분  */
+    footer>div{background-color: rgb(229, 226, 226); height:90px; width:890px; margin-top: 5px; margin-left: 5px;}
+    footer span{font-size:25px; display: inline-block; margin-top:32.5px; margin-left:289.5px;}
+  
+
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <span id="logo">로고이미지</span>
+      <span id="menu">
+        <ul>
+          <li>메뉴1</li>
+          <li>메뉴2</li>
+          <li>메뉴3</li>
+        </ul>
+      </span>
+      <span id="login">로그인</span>
+    </div>
+  </header>
+  <section>
+    <span id="leftspan">
+      <table>
+        <caption>최근에 등록된 게시글1</caption>
+        <tr id="trstyle">
+          <td>번호</td>
+          <td>제목</td>
+          <td>날짜</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">5</td>
+          <td>게시글5</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">4</td>
+          <td>게시글4</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">3</td>
+          <td>게시글3</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">2</td>
+          <td>게시글2</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">1</td>
+          <td>게시글1</td>
+          <td>02/25</td>
+        </tr>
+      </table>
+    </span>
+    <span id="rightspan">
+      <table>
+        <caption>최근에 등록된 게시글2</caption>
+        <tr id="trstyle">
+          <td>번호</td>
+          <td>제목</td>
+          <td>날짜</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">5</td>
+          <td>게시글5</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">4</td>
+          <td>게시글4</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">3</td>
+          <td>게시글3</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">2</td>
+          <td>게시글2</td>
+          <td>02/25</td>
+        </tr>
+        <tr>
+          <td class="tdstylenumber">1</td>
+          <td>게시글1</td>
+          <td>02/25</td>
+        </tr>
+      </table>
+    </span>
+  </section>
+  <footer>
+    <div>
+      <span class="footercopyright">Copyright© Create By XXXXX</span>
+    </div>
+  </footer>
+  
+</body>
+</html>
