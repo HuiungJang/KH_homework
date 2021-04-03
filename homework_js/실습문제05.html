@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>간이 계산기 만들기</h1>
+  <div>
+    첫번째 값: <input type="number" name="" id="num1"><br>
+    두번째 값: <input type="number" name="" id="num2"><br>
+    <input type="button" value="+" onclick="cal('+');">
+    <input type="button" value="-" onclick="cal('-');">
+    <input type="button" value="X" onclick="cal('*');">
+    <input type="button" value="/" onclick="cal('/');">
+    <input type="button" value="%" onclick="cal('%');"> <br>
+    계산결과 : <p id="result"></p>
+  </div>
+  <script>
+    const cal =(a)=>{
+      let num1= Number(document.getElementById("num1").value);
+      let num2= Number(document.getElementById("num2").value);
+      
+      let result=0;
+
+      switch(a){
+        case '+':
+          result= num1+num2;
+          break;
+        case '-':
+          result= num1-num2;
+          break;
+        case '*':
+          result= num1*num2;
+          break;
+        case '/':
+          result= num1/num2;
+          break;
+        case '%':
+          result= num1%num2;
+          break;
+      }
+
+      document.getElementById("result").innerHTML=result;
+    }
+  </script>
+</body>
+</html>
