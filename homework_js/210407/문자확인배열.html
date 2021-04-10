@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../library/jquery.3.6.0.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  문제1.다음보기에 있는 텍스트필드에 작성한 문자열의 길이를 알아 올 수 있도록 구현
+  <fieldset>
+    <legend>보기</legend>
+    <p>12314</p>
+  </fieldset>
+  <div id=result></div>
+  <button onclick="fn();">확인하기</button>
+  <script>
+    const fn = ()=>{
+      $("#result").html("보기의 문자열 길이는 "+($("fieldset p").text().length)+"글자 입니다.");
+    }
+  </script>
+</body>
+</html>
