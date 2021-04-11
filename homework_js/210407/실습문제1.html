@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../library/jquery.3.6.0.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrap">
+    <div>
+      <span>구매자 : <input type="text" name="" id="name"></span><br>
+      <span>상품명 : <input type="text" name="" id="product"></span><br>
+      <span>가격 : <input type="text" name="" id="price">만원</span> <br>
+      <button>입력값 출력하기</button>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    $(function(){
+      $("#wrap>div button").click(()=>{
+        $("#result").html(`구입자 : ${$("#name").val()} <br>
+        구입상품 : ${$("#product").val()}<br>
+        구매가격 : ${$("#price").val()}만원`)
+      })
+    })
+  </script>
+</body>
+</html>

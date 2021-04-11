@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../library/jquery.3.6.0.js"></script>
+  <title>Document</title>
+</head>
+<style>
+  table{
+    border-collapse: collapse;
+    width: 900px;
+    height: 250px;
+  }
+  table td{
+    border: 1px black solid;
+  }
+  table td:nth-child(1){
+    background-color: blanchedalmond;
+    color:coral;
+    font-weight: bold;
+    font-size:115%;
+  }
+  table td span{
+    display: block;
+  }
+  table td span:nth-child(1){
+    color:blue;
+    font-style: italic;
+  }
+  #lastCol{
+    background-color: white;
+    height: 70px;
+    text-align: center;
+  }
+</style>
+<body>
+  <div id="contaier">
+    <table>
+      <tr>
+        <td>
+          거래처명
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          주소
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          전화번호
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          품명(중고품)
+        </td>
+        <td>
+          <input type="checkbox" value="board">메인보드
+          <input type="checkbox" value="monitor">모니터
+          <input type="checkbox" value="printer">프린터
+          <input type="checkbox" value="hard">하드디스크
+          <input type="checkbox" value="mem">메모리
+          <input type="checkbox" value="cpu">CPU
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>모두선택/해제<input type="checkbox" name="" id="allCheck"></span>
+          <span>품명(수입산)</span>
+        </td>
+        <td>
+          <div>
+            <input type="checkbox" value="board">메인보드
+            <input type="checkbox" value="monitor">모니터
+            <input type="checkbox" value="printer">프린터
+            <input type="checkbox" value="hard">하드디스크
+            <input type="checkbox" value="mem">메모리
+            <input type="checkbox" value="cpu">CPU        
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" id="lastCol"><button>등록</button><button>취소</button></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    $(function(){
+      $("#allCheck").click(()=>{
+        if($("table>tbody tr td>div *").prop("checked")){
+            $("table>tbody tr td>div *").removeAttr("checked");
+          }else{
+            $("table>tbody tr td>div *").attr("checked","checked");
+          }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../library/jquery.3.6.0.js"></script>
+  <title>Document</title>
+  <style>
+  table{
+    border-collapse: collapse;
+    width: 900px;
+    height: 250px;
+  }
+  table td{
+    border: 1px black solid;
+  }
+  table tr:nth-child(9){
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <table>
+    <tbody>
+      <tr>
+        <td>전체선택</td>
+        <td>
+          <div id="allCheck">
+            <input type="checkbox" value="red">빨
+            <input type="checkbox" value="orange">주
+            <input type="checkbox" value="yellow">노
+            <input type="checkbox" value="green">초
+            <input type="checkbox" value="blue">파
+            <input type="checkbox" value="navy">남        
+            <input type="checkbox" value="purple">보
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>하나</td>
+        <td>
+          <div id="one">
+            <input type="checkbox" value="red">빨
+            <input type="checkbox" value="orange">주
+            <input type="checkbox" value="yellow">노
+            <input type="checkbox" value="green">초
+            <input type="checkbox" value="blue">파
+            <input type="checkbox" value="navy">남        
+            <input type="checkbox" value="purple">보
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>둘</td>
+        <td>
+          <div id="two">
+            <input type="checkbox" value="red">빨
+            <input type="checkbox" value="orange">주
+            <input type="checkbox" value="yellow">노
+            <input type="checkbox" value="green">초
+            <input type="checkbox" value="blue">파
+            <input type="checkbox" value="navy">남        
+            <input type="checkbox" value="purple">보
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>셋</td>
+        <td>
+          <div id="three">
+            <input type="checkbox" value="red">빨
+            <input type="checkbox" value="orange">주
+            <input type="checkbox" value="yellow">노
+            <input type="checkbox" value="green">초
+            <input type="checkbox" value="blue">파
+            <input type="checkbox" value="navy">남        
+            <input type="checkbox" value="purple">보
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>넷</td>
+        <td>
+          <div id="four">
+            <input type="checkbox" value="red">빨
+            <input type="checkbox" value="orange">주
+            <input type="checkbox" value="yellow">노
+            <input type="checkbox" value="green">초
+            <input type="checkbox" value="blue">파
+            <input type="checkbox" value="navy">남        
+            <input type="checkbox" value="purple">보
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>다섯</td>
+        <td>
+          <div id="five">
+            <input type="checkbox" value="red">빨
+            <input type="checkbox" value="orange">주
+            <input type="checkbox" value="yellow">노
+            <input type="checkbox" value="green">초
+            <input type="checkbox" value="blue">파
+            <input type="checkbox" value="navy">남        
+            <input type="checkbox" value="purple">보
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>여섯</td>
+        <td>
+          <div id="six">
+            <input type="checkbox" value="red">빨
+            <input type="checkbox" value="orange">주
+            <input type="checkbox" value="yellow">노
+            <input type="checkbox" value="green">초
+            <input type="checkbox" value="blue">파
+            <input type="checkbox" value="navy">남        
+            <input type="checkbox" value="purple">보
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>일곱</td>
+        <td>
+          <div id="seven">
+            <input type="checkbox" value="red">빨
+            <input type="checkbox" value="orange">주
+            <input type="checkbox" value="yellow">노
+            <input type="checkbox" value="green">초
+            <input type="checkbox" value="blue">파
+            <input type="checkbox" value="navy">남        
+            <input type="checkbox" value="purple">보
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><button>submit</button><button id="reset">reset</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    $(function(){
+      // 전체 선택
+      $("#allCheck input").click(()=>{
+        switch($("div input:checked").val()){
+          case "red":
+            $("table tr td div").css("backgroundColor","red"); break;
+          case "orange":
+            $("table tr td div").css("backgroundColor","orange"); break;
+          case "yellow":
+            $("table tr td div").css("backgroundColor","yellow"); break;
+          case "green":
+            $("table tr td div").css("backgroundColor","green"); break;
+          case "blue":
+            $("table tr td div").css("backgroundColor","blue"); break;
+          case "navy":
+            $("table tr td div").css("backgroundColor","navy");
+            $("table tr td div").css("color","white"); 
+            break;
+          case "purple":
+            $("table tr td div").css("backgroundColor","purple"); break;
+          default:
+            $("div").css("backgroundColor","");
+            $("table tr td div").css("color",""); 
+            break;
+        }
+      });
+
+      $("#one input").click(()=>{
+        switch($("#one input:checked").val()){
+          case "red":
+            $("#one").css("backgroundColor","red"); break;
+          case "orange":
+            $("#one").css("backgroundColor","orange"); break;
+          case "yellow":
+            $("#one").css("backgroundColor","yellow"); break;
+          case "green":
+            $("#one").css("backgroundColor","green"); break;
+          case "blue":
+            $("#one").css("backgroundColor","blue"); break;
+          case "navy":
+            $("#one").css("backgroundColor","navy");
+            $("#one").css("color","white"); 
+            break;
+          case "purple":
+            $("#one").css("backgroundColor","purple"); break;
+          default:
+            $("#one").css("backgroundColor","");
+            $("#one").css("color",""); 
+            break;
+        }
+      });
+
+      $("#two input").click(()=>{
+        switch($("#two input:checked").val()){
+          case "red":
+            $("#two").css("backgroundColor","red"); break;
+          case "orange":
+            $("#two").css("backgroundColor","orange"); break;
+          case "yellow":
+            $("#two").css("backgroundColor","yellow"); break;
+          case "green":
+            $("#two").css("backgroundColor","green"); break;
+          case "blue":
+            $("#two").css("backgroundColor","blue"); break;
+          case "navy":
+            $("#two").css("backgroundColor","navy");
+            $("#two").css("color","white"); 
+            break;
+          case "purple":
+            $("#two").css("backgroundColor","purple"); break;
+          default:
+            $("#two").css("backgroundColor","");
+            $("#two").css("color",""); 
+            break;
+        }
+      });
+
+      $("#three input").click(()=>{
+        switch($("#three input:checked").val()){
+          case "red":
+            $("#three").css("backgroundColor","red"); break;
+          case "orange":
+            $("#three").css("backgroundColor","orange"); break;
+          case "yellow":
+            $("#three").css("backgroundColor","yellow"); break;
+          case "green":
+            $("#three").css("backgroundColor","green"); break;
+          case "blue":
+            $("#three").css("backgroundColor","blue"); break;
+          case "navy":
+            $("#three").css("backgroundColor","navy");
+            $("#three").css("color","white"); 
+            break;
+          case "purple":
+            $("#three").css("backgroundColor","purple"); break;
+          default:
+            $("#three").css("backgroundColor","");
+            $("#three").css("color",""); 
+            break;
+        }
+      });
+
+      $("#four input").click(()=>{
+        switch($("#four input:checked").val()){
+          case "red":
+            $("#four").css("backgroundColor","red"); break;
+          case "orange":
+            $("#four").css("backgroundColor","orange"); break;
+          case "yellow":
+            $("#four").css("backgroundColor","yellow"); break;
+          case "green":
+            $("#four").css("backgroundColor","green"); break;
+          case "blue":
+            $("#four").css("backgroundColor","blue"); break;
+          case "navy":
+            $("#four").css("backgroundColor","navy");
+            $("#four").css("color","white"); 
+            break;
+          case "purple":
+            $("#four").css("backgroundColor","purple"); break;
+          default:
+            $("#four").css("backgroundColor","");
+            $("#four").css("color",""); 
+            break;
+        }
+      });
+
+      $("#five input").click(()=>{
+        switch($("#five input:checked").val()){
+          case "red":
+            $("#five").css("backgroundColor","red"); break;
+          case "orange":
+            $("#five").css("backgroundColor","orange"); break;
+          case "yellow":
+            $("#five").css("backgroundColor","yellow"); break;
+          case "green":
+            $("#five").css("backgroundColor","green"); break;
+          case "blue":
+            $("#five").css("backgroundColor","blue"); break;
+          case "navy":
+            $("#five").css("backgroundColor","navy");
+            $("#five").css("color","white"); 
+            break;
+          case "purple":
+            $("#five").css("backgroundColor","purple"); break;
+          default:
+            $("#five").css("backgroundColor","");
+            $("#five").css("color",""); 
+            break;
+        }
+      });
+
+      $("#six input").click(()=>{
+        switch($("#six input:checked").val()){
+          case "red":
+            $("#six").css("backgroundColor","red"); break;
+          case "orange":
+            $("#six").css("backgroundColor","orange"); break;
+          case "yellow":
+            $("#six").css("backgroundColor","yellow"); break;
+          case "green":
+            $("#six").css("backgroundColor","green"); break;
+          case "blue":
+            $("#six").css("backgroundColor","blue"); break;
+          case "navy":
+            $("#six").css("backgroundColor","navy");
+            $("#six").css("color","white"); 
+            break;
+          case "purple":
+            $("#six").css("backgroundColor","purple"); break;
+          default:
+            $("#six").css("backgroundColor","");
+            $("#six").css("color",""); 
+            break;
+        }
+      });
+
+      $("#seven input").click(()=>{
+        switch($("#seven input:checked").val()){
+          case "red":
+            $("#seven").css("backgroundColor","red"); break;
+          case "orange":
+            $("#seven").css("backgroundColor","orange"); break;
+          case "yellow":
+            $("#seven").css("backgroundColor","yellow"); break;
+          case "green":
+            $("#seven").css("backgroundColor","green"); break;
+          case "blue":
+            $("#seven").css("backgroundColor","blue"); break;
+          case "navy":
+            $("#seven").css("backgroundColor","navy");
+            $("#seven").css("color","white"); 
+            break;
+          case "purple":
+            $("#seven").css("backgroundColor","purple"); break;
+          default:
+            $("#seven").css("backgroundColor","");
+            $("#seven").css("color",""); 
+            break;
+        }
+      });
+
+      $("#reset").click(()=>{
+        $("div").css("backgroundColor","");
+        $("table tr td div").css("color","");
+        $("div input[type=checkbox]").prop("checked",false);
+      });
+    });
+  </script>
+</body>
+</html>

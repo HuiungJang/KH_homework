@@ -4,15 +4,55 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../library/jquery.3.6.0.js"></script>
   <title>Document</title>
 </head>
+<style>
+  #a, #b, #c{display: none;}
+
+</style>
 <body>
   <fieldset>
     <legend>검색할 항목을 선택하세요</legend>
-    <input type="radio">제목
-    <input type="radio" name="" id="">날짜
-    <input type="radio" name="" id="">작성자
-  </fieldset>
 
+    <input type="radio" value="title" name="tmp">제목
+    <input type="radio" value="date" name="tmp">날짜
+    <input type="radio" value="author" name="tmp">작성자
+  </fieldset>
+  <hr>
+  <div id="a">
+    <p>검색할 제목을 입력하세요</p>
+    <span><input type="text" id="inputtitle"> <button>검색</button></span>
+  </div><div id="b">
+    <p>검색할 작성자 아이디를 입력하세요</p>
+    <span><input type="date" name="" id=""> - <input type="date" name="" id=""><button>검색</button></span>
+  </div>
+  <div id="c">
+    <p>검색할 작성자 아이디를 입력하세요</p>
+    <span><input type="text" id="inputid"> <button>검색</button></span>
+  </div>
+  <script>
+    $(function(){
+      $("fieldset input").click(()=>{
+        let value =$("fieldset input:checked").val();
+
+        if(value==="title"){
+          $("#a").css("display","block");
+          $("#b").css("display","none");
+          $("#c").css("display","none");
+
+        }else if(value==="date"){
+          $("#a").css("display","none");
+          $("#b").css("display","block");
+          $("#c").css("display","none");
+
+        }else{
+          $("#a").css("display","none");
+          $("#b").css("display","none");
+          $("#c").css("display","block");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
