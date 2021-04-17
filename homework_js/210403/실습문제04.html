@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .result{
+    width:400px;
+    height: 200px;
+    border:1px red solid;
+    margin-top: 30px;
+  }
+</style>
+<body>
+  <h1>기본 문법문제</h1>
+  문제1.다음보기에 있는 텍스트 필드에 작성한 문자열의 길이를 알아 올 수 있도록 구현하시오 <br>
+  <div>
+    <fieldset>
+    <legend>보기</legend>
+    <input type="text" name="" id="text" placeholder="글자를 작성해보세요" >
+    </fieldset>
+    <div class ="result"></div>
+    <button onclick="question1();">확인하기</button>
+  </div>
+  <br>
+  <div>
+    문제2.다음보기에 있는 문자열을 ,(콤마)를 기준으로 잘라내어 하나하나 출력하시오 <br>
+    <fieldset>
+    <legend>보기</legend>
+    <p id="example"> 콜라,사이다,햄버거,피자,한약</p>
+    </fieldset>
+    <div class ="result"></div>
+    <button onclick="question2();">확인하기</button>
+  </div>
+
+  <script>
+    const question1 =()=>{
+      let text = document.getElementById("text").value.length;
+      document.getElementsByClassName("result")[0].innerHTML = `보기의 문자열 길이는 ${text}글자 입니다.`;
+    }
+
+    const question2 =()=>{
+      let text2=document.getElementById("example").innerText.split(",");
+      document.getElementsByClassName("result")[1].innerHTML = 
+      `
+      1.${text2[0]} <br>
+      2.${text2[1]} <br>
+      3.${text2[2]} <br>
+      4.${text2[3]} <br>
+      5.${text2[4]} 
+      `;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #result{
+    border:1px red solid;
+    width: 200px;
+    height: 20px;
+  }
+</style>
+<body>
+  <h1>배열 실습문제2</h1>
+  다음 보기에 있는 문자열을 가지고 정답과 같이 만드세요(별도의 문자열을 쓰면 안됨) <br>
+  그리고 출력부분에 출력하도록 하면 됩니다. 정답 :"brlove"
+  <div>
+    <fieldset>
+    <legend>보기</legend>
+      <label id="la1">r b</label><br> 
+      <label id="la2">e v o l</label><br>
+    </fieldset>
+    <br>
+  </div>
+  <div id ="result"></div>
+  <button onclick="question();">처리</button>
+  <script>
+    const question =()=>{
+      let la1= document.getElementById("la1").innerText.split(" ").reverse();
+      let la2 =document.getElementById("la2").innerText.split(" ").reverse();
+      let text="";
+
+      for(let i of la1){
+        text+=i;
+      }
+      for(let j of la2){
+        text+=j;
+      }
+      document.getElementById("result").innerHTML=text;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>배열 실습문제1</h1>
+  다음보기에 있는 데이터들은 배열로 받고 하나의 바열로 합쳐보세요<br>
+  이때 입력필드에 배열에 있는 데이터를 전송하면 배열의 alert를 통하여 <br>
+  배열의 위치를 알려주고 없으면 "존재하지 않습니다."를 알려주면 됩니다.
+  <div>
+    <fieldset>
+    <legend>보기</legend>
+      <label id="la1">사과,바나나,당근</label><br> 
+      <label id="la2">김밥,치즈,떡볶이,햄버거</label><br>
+      <label id="la3">환타,사이다,콜라</label><br>
+      <label id="la4">고양이,강아지</label><br>
+    </fieldset>
+    <br>
+    <div class ="result"></div>
+      <input type="text" name="" id="input" placeholder="찾을 문자열을 입력하세요" size="50"> <br>
+      <button onclick="question1();">전송 및 처리</button>
+    </div>
+
+    <script>
+      const question1 =()=>{
+        let la1= document.getElementById("la1").innerText.split(",");
+        let la2= document.getElementById("la2").innerText.split(",");
+        let la3= document.getElementById("la3").innerText.split(",");
+        let la4= document.getElementById("la4").innerText.split(",");
+
+        let la =[la1,la2,la3,la4];
+        let input=document.getElementById("input").value;
+
+        for(let i=0; i<la.length; i++){
+          for(let j=0; j<la[i].length; j++){  
+            if(la[i][j]=== input){
+              alert(`${input}은 배열 ${i}의 ${j}번째 인덱스에 있습니다.`);
+              return;
+            }
+          }
+        }
+        alert("존재하지 않습니다.");    
+        
+
+      }
+    </script>
+</body>
+</html>
