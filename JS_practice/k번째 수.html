@@ -18,7 +18,7 @@
       // console.log(cm[0][1]);
 
       for(let i=0; i<cm.length; i++){
-        let ary = ar.slice(cm[i][0]-1,cm[i][1]).sort();
+        let ary = ar.slice(cm[i][0]-1,cm[i][1]).sort((a,b)=> a-b);
         
         result.push(ary[cm[i][2]-1]);
       }
